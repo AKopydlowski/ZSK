@@ -1,15 +1,16 @@
-
-//Konstruktory
+//konstruktory
 #include <iostream>
 
 using namespace std;
 
 struct Date{
-	int dd, mm, yyyy;
+	int dd,mm,yyyy;
 };
 
 class Car{
+	
 	public:
+		
 		int id;
 		string brand, model, color;
 		unsigned short int power;
@@ -17,69 +18,56 @@ class Car{
 		Date dateOfProduction;
 		
 		void getData();
-		void setData();
 		
-		//konstruktor
-		// 1 sposób
-		//Car(){
-		//cout<<"Konstruktor";
-		//	id=10, model="126p", color="czerwony";
-		//	power=60;
-		//	dateOfProduction={19, 10, 1995};
-		//	price=20000;
-		//}
+		Car(int, string, string, string, unsigned short int, float, Date);
 		
-		Car(int, string, unsigned short int, float, Date);
+		/*Car(){
 			
+			cout << "Konstruktor" << endl << endl;
+			id = 9898392034898;
+			brand = "Alfa Romeo";
+			model = "Stelvio";
+			color = "Black";
+			power = 495;
+			price = 265.000;
+			dateOfProduction = {15,12,2018};
+			
+		}*/
+	
 };
-		Car::Car(int pd, string pBrand, string pModel, string pColor, unsigned short int pPower, float pPrice, Date pdateOfProduction ){
-			id=pId;
-			brand=pBrand;
-			id=pid
-			id=pid
-			id=pid
-			id=pid
-			id=pid
-			//to do
-		}
-		
-	void Car::setData(){
-		cout<<"Podaj id: ";
-		cin>>id;
-		cout<<"Podaj Markê: ";
-		cin>>brand;
-		cout<<"Podaj Model: ";
-		cin>>model;
-		cout<<"Podaj Kolor: ";
-		cin>>color;
-		cout<<"Podaj Rocznik: ";
-		cin>>dateOfProduction.yyyy;
-		cout<<"Podaj Moc: ";
-		cin>>power;
-		cout<<"Podaj Cenê: ";
-		cin>>price;
-		cout<<endl;
-		
-	}
 
-	void Car::getData(){
-		cout<<"\nID: "<<id<<"\nMarka: "<<brand<<"\nModel: "<<model<<"\nKolor: "<<color
-		<<"\nRok Produkcji: "<<dateOfProduction.yyyy<<"r.\nMoc: "<<power<<"HP\nCena: "<<price<<"PLN"<<endl<<endl;
-	}
+Car::Car(int id, string brand, string model, string color, unsigned short int power, float price, Date dateOfProduction){
 	
 	
+	Car::id = id;
+	Car::brand = brand;
+	Car::model = model;
+	Car::color = color;
+	Car::power = power;
+	Car::price = price;
+	Car::dateOfProduction = dateOfProduction;
+	
+}
 
+void Car::getData(){
+	
+	cout << "Id: "<<id<<endl
+		 << "Marka: "<<brand<<endl
+		 << "Model: "<<model<<endl
+		 << "Kolor: "<<color<<endl
+		 << "Moc: " <<power<<"HP"<<endl
+		 << "Cena: "<<price<<"zł"<<endl
+		 << "Data produkcji: "<<dateOfProduction.dd<<"."<<dateOfProduction.mm <<"."<<dateOfProduction.yyyy<<"r." <<endl; 
+	
+}
 
 int main() {
-	setlocale(LC_CTYPE, "polish");
 	
-//  1 sposób
-//	Car fiat;
+	setlocale(LC_CTYPE, "Polish");
 	
-	Car fiat(1, "x", 1, 1, {1, 2, 3});
-	fiat.setData();
-	fiat.getData();
+	Car alfa(409320, "Alfa Romeo", "Stelvio", "Black", 495, 200000, {15,12,2018});
+	
+	alfa.getData();
 	
 	return 0;
-
-};
+}
