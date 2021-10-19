@@ -1,4 +1,4 @@
-//konstruktory
+//konstruktory 1 część
 #include <iostream>
 
 using namespace std;
