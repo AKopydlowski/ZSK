@@ -20,7 +20,7 @@ class Car{
 		void setData();
 		
 		//konstruktor
-		// 1 sposób
+		// 1 sposÃ³b
 		//Car(){
 		//cout<<"Konstruktor";
 		//	id=10, model="126p", color="czerwony";
@@ -32,9 +32,9 @@ class Car{
 		Car(int, string, unsigned short int, float, Date);
 			
 };
-		Car::Car(int pid, string pBrand, string pModel, string pColor, unsigned short int pPower, float pPrice, Date pdateOfProduction ){
-			id=pid
-			id=pid
+		Car::Car(int pd, string pBrand, string pModel, string pColor, unsigned short int pPower, float pPrice, Date pdateOfProduction ){
+			id=pId;
+			brand=pBrand;
 			id=pid
 			id=pid
 			id=pid
@@ -45,7 +45,7 @@ class Car{
 	void Car::setData(){
 		cout<<"Podaj id: ";
 		cin>>id;
-		cout<<"Podaj Markê: ";
+		cout<<"Podaj MarkÃª: ";
 		cin>>brand;
 		cout<<"Podaj Model: ";
 		cin>>model;
@@ -55,7 +55,7 @@ class Car{
 		cin>>dateOfProduction.yyyy;
 		cout<<"Podaj Moc: ";
 		cin>>power;
-		cout<<"Podaj Cenê: ";
+		cout<<"Podaj CenÃª: ";
 		cin>>price;
 		cout<<endl;
 		
@@ -72,7 +72,7 @@ class Car{
 int main() {
 	setlocale(LC_CTYPE, "polish");
 	
-//  1 sposób
+//  1 sposÃ³b
 //	Car fiat;
 	
 	Car fiat(1, "x", 1, 1, {1, 2, 3});
