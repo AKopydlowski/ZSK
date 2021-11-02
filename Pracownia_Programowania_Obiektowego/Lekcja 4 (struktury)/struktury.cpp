@@ -18,7 +18,7 @@ int main() {
 	setlocale(LC_CTYPE, "polish");
 	Student kowalski{"janusz","bruh",100,{28,9,2021},{5, 4, 3, 2, 5,}};
 	
-	cout<<"Imiê i Nazwisko: "<<kowalski.name<<" "<<kowalski.surname
+	cout<<"ImiÃª i Nazwisko: "<<kowalski.name<<" "<<kowalski.surname
 	<<"\nIndetyfikator: "<<kowalski.id<<"\ndata urodzenia: "<<kowalski.dateBirthday.dd
 	<<"-"<<kowalski.dateBirthday.mm<<"-"<<kowalski.dateBirthday.yyyy<<"r.\n";
 	
