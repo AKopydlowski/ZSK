@@ -30,7 +30,7 @@ void Worker::showPersonallity(){
 	cout << "Imie i Nazwisko " << name << " " << surname << endl;
 }
 void Worker::showAllData(){
-	cout << "Narodowoœæ: " << nationallity << endl;
+	cout << "NarodowoÅ“Ã¦: " << nationallity << endl;
 	cout << "Wiek: " << 2021-birthYear << endl;
 	cout << "Wzrost: " << height << endl;
 }
