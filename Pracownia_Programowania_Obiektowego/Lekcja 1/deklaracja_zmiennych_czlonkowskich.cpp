@@ -4,15 +4,15 @@ using namespace std;
 
 class Worker {
 	public:
-// deklaracja zmiennych cz≥onkowskich (w≥aúciwoúci)
+// deklaracja zmiennych cz≈Çonkowskich (w≈Ça≈õciwo≈õci)
 	string name="Janusz";
 	string surname;
 // zezwala na znak, tylko dodatnia liczba do  32767
 	unsigned short age;
 	
-// deklaracja funkcji cz≥onkowskiej (metoda)
+// deklaracja funkcji cz≈Çonkowskiej (metoda)
 	void showData(){
-		cout << "ImiÍ" << endl;
+		cout << "Imiƒô" << endl;
 	};
 	
 	void showName(){
@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
 	pracownik.showData();
 	pracownik.surname = "Kowalski";
 	pracownik.name = "Andrzej";
-	cout << "imiÍ i nazwisko:" << pracownik.name <<" "<< pracownik.surname << endl;
+	cout << "imiƒô i nazwisko:" << pracownik.name <<" "<< pracownik.surname << endl;
 	cout << "wiek" << " " << pracownik.age;
 	pracownik.showName();
 	return 0;
