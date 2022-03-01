@@ -2,39 +2,39 @@
 using namespace std;
 
 //klasa abstrakcyjna
-class Character{
+class Driver{
 	public:
 		string name;
 		virtual	void go()=0;
 		virtual void stop()=0;	
 };
-class Human: public Character{
+class Kubica: public Driver{
 	public:
 		void go(){
-			cout<<"Cz³owiek idzie\n";
+			cout<<"Kubica idzie\n";
 		}
 		void stop(){
-			cout<<"Cz³owiek zatrzymuje siê\n";
+			cout<<"Kubica zatrzymuje siÄ™\n";
 		}
 		
 		
 };
-class Bear: public Character{
+class Rainkonen: public Driver{
 	public:
 		void go(){
-				cout<<"Niedzielski idzie\n";
+				cout<<"Rainkonen idzie\n";
 			}
 			void stop(){
-				cout<<"Niedzielski zatrzymuje siê\n";
+				cout<<"Rainkonen zatrzymuje siÄ™\n";
 			}
 };
-class superHero: public Character{
+class Sainz: public Driver{
 	public:
 		void go(){
-				cout<<"Morawiecki idzie\n";
+				cout<<"Sainz idzie\n";
 			}
 			void stop(){
-				cout<<"Morawiecki zatrzymuje siê\n";
+				cout<<"Sainz zatrzymuje siÄ™\n";
 			}
 };
 
@@ -42,16 +42,23 @@ class superHero: public Character{
 int main() {
 	setlocale(LC_CTYPE, "polish");
 	
-//	Character postac;
-//	postac.go();
 
-	Human czlowiek;
-	czlowiek.go();
-	czlowiek.stop();
+
 	
-	Bear niedzwiedz;
-	niedzwiedz.go();
-	niedzwiedz.stop();
+	//wskaÅºniki
+	//jawne 
+	Driver *bolid = new Rainkonen();
+	bolid->go();
+	bolid->stop();
+	
+	//polimorfizm
+	Sainz bohater;
+	Driver *idol=&bohater;
+	idol=&bohater;
+	idol->go();
+	
+	idol=bolid;
+	idol->go();
 
 
 
