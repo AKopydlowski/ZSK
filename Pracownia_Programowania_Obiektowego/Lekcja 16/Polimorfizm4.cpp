@@ -11,21 +11,21 @@ using namespace std;
 		 virtual void Breath(){
 		 	cout<<"Oddychaj!"<<endl;
 		 }
- };
+};
   class Fish: public Animal{
   	public:
   		virtual void Breath(){
 		 	cout<<"Ryba oddycha skrzelami :D"<<endl;
 		 }
 		virtual void Swim(){
-		 	cout<<"P³yñ<<endl;
+		 	cout<<"PÅ‚yn"<<endl;
 		 }
   		
 };
-  class Mamal: public Animal{
+  class Mammal: public Animal{
   	public:
   		virtual void Breath(){
-		 	cout<<"ssak oddycha p³ucami "<<endl;
+		 	cout<<"ssak oddycha pÅ‚ucami "<<endl;
 		 }
 		virtual void Run(){
 		 	cout<<"Biegnij"<<endl;
@@ -34,20 +34,26 @@ using namespace std;
   class Bird: public Animal{
   	public:
   		virtual void Breath(){
-		 	cout<<"ptak oddycha p³ucami "<<endl;
+		 	cout<<"ptak oddycha pÅ‚ucami "<<endl;
 		 }
 		virtual void Fly(){
-		 	cout<<"Leæ"<<endl;
+		 	cout<<"LeÄ‡"<<endl;
 		 }
 };
  
 int main(){
 	setlocale(LC_CTYPE, "polish");
 	
-	Fish rybcia;
+	//polimorfizm
+	Mammal zwierze;
+	Animal *wsk = &zwierze;
+	wsk->Breath();
 	
+//	Fish zwierze1;
+//	Animal *wsk1 = &zwierze1;
+//	wsk1->Breath();
 	
-	
-	
+		
+		
 	return 0;
 }
